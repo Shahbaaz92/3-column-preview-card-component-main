@@ -24,7 +24,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 1100px;
+  min-height: 100vh;
+
   font-family: var(--font-primary);
 }
 main {
@@ -32,11 +33,13 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
-  width: 260px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin: 1em;
+  padding: 2em;
 }
 h1 {
   color: var(--color-secondary);
@@ -107,13 +110,14 @@ p {
 
 @media (min-width: 786px) {
   body {
-    height: 100vh;
+    /* height: 100vh; */
   }
   main {
     min-width: 800px;
     height: 90vh;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 0.35em;
   }
   .attribution {
     align-self: flex-start;
