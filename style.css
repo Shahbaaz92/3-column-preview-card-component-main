@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --color-primary1: hsl(31, 77%, 52%);
+  --color-primary2: hsl(184, 100%, 22%);
+  --color-primary3: hsl(179, 100%, 13%);
+  --color-secondary: hsl(0, 0%, 95%);
+  --color-text-primary: hsla(0, 0%, 100%, 0.749);
+
+  --font-primary: "Lexend Deca", sans-serif;
+  --font-secondary: "Big Shoulders Display", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 1100px;
+  font-family: var(--font-primary);
+}
+main {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  color: var(--color-secondary);
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+}
+p {
+  font-size: 0.75rem;
+}
+.container {
+  height: calc(1000 / 3) px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  row-gap: 25px;
+}
+.sedan {
+  background-color: var(--color-primary1);
+}
+.suv {
+  background-color: var(--color-primary2);
+}
+.luxury {
+  background-color: var(--color-primary3);
+}
+.icon {
+  width: 70px;
+  height: 45px;
+}
+.btn-primary {
+  cursor: pointer;
+  padding: 7.5px 10px;
+  border-radius: 50px;
+  border: 2px solid var(--color-secondary);
+  background-color: var(--color-secondary);
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+}
+.btn-sedan {
+  color: var(--color-primary1);
+}
+.btn-suv {
+  color: var(--color-primary2);
+}
+.btn-luxury {
+  color: var(--color-primary3);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: transparent;
+  color: var(--color-secondary);
+}
+
+.attribution {
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: -10px;
+  font-size: 0.55rem;
+  align-self: center;
+  color: #000;
+}
+.attribution a {
+  color: hsl(35, 100%, 12%);
+}
+
+@media (min-width: 786px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    min-width: 800px;
+    height: 90vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .attribution {
+    align-self: flex-start;
+  }
+}
